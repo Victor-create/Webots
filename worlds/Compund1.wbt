@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.7290935922686496 0.6773770122045127 0.09789237482911409 0.3913560330333969
-  position 0.7266366598559872 0.7004679627145832 2.017876816986858
+  orientation -0.9676422470004653 -0.24518227480714302 -0.0596165576017689 0.49237154131403627
+  position 0.20650018216222765 1.2164926804970952 2.125750787150626
 }
 TexturedBackground {
 }
@@ -22,7 +22,7 @@ Solid {
             roughness 1
             metalness 0
           }
-          geometry DEF Cylinder Cylinder {
+          geometry Cylinder {
             height 0.3
             radius 0.01
           }
@@ -47,6 +47,54 @@ Solid {
           children [
             USE SH_SPHERE
           ]
+        }
+        Transform {
+          translation 0 -0.15 0.15
+          rotation 1 0 0 1.5707996938995747
+          children [
+            USE Cylinder
+          ]
+        }
+        Transform {
+          translation 0 0.15 0.15
+          rotation 1 0 0 1.5708003061004252
+          children [
+            USE Cylinder
+          ]
+        }
+        Transform {
+          translation 0 0 0.3
+          children [
+            USE Cylinder
+          ]
+        }
+        Transform {
+          translation 0 0.15 0.3
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0 -0.15 0.3
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.15 0.15 0
+          rotation 0 0 1 1.5707996938995747
+          children [
+            USE Cylinder
+          ]
+        }
+        Transform {
+          translation 0.15 -0.15 0
+          rotation 0 0 1 1.5707996938995747
+          children [
+            USE Cylinder
+          ]
+        }
+        Transform {
         }
         Transform {
         }
