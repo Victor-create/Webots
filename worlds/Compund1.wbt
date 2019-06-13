@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.9757125087458868 -0.21597470505921426 -0.03660637992745627 5.939192265539241
-  position 1.0662645100932617 1.7519355214614598 6.605419951504809
+  orientation -0.7290935922686496 0.6773770122045127 0.09789237482911409 0.3913560330333969
+  position 0.7266366598559872 0.7004679627145832 2.017876816986858
 }
 TexturedBackground {
 }
@@ -12,17 +12,17 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 0.15 0
+  translation 0 0.4 0
   children [
-    Group {
+    DEF GR_FRAME Group {
       children [
-        Shape {
+        DEF Cylinder Shape {
           appearance PBRAppearance {
             baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
             roughness 1
             metalness 0
           }
-          geometry Cylinder {
+          geometry DEF Cylinder Cylinder {
             height 0.3
             radius 0.01
           }
@@ -30,7 +30,7 @@ Solid {
         Transform {
           translation 0 0.15 0
           children [
-            Shape {
+            DEF SH_SPHERE Shape {
               appearance PBRAppearance {
                 baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
                 roughness 1
@@ -42,7 +42,18 @@ Solid {
             }
           ]
         }
+        Transform {
+          translation 0 -0.15 0
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+        }
       ]
     }
   ]
+  boundingObject USE GR_FRAME
+  physics Physics {
+  }
 }
