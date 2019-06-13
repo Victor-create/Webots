@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.9676422470004653 -0.24518227480714302 -0.0596165576017689 0.49237154131403627
-  position 0.20650018216222765 1.2164926804970952 2.125750787150626
+  orientation 0.0017471472963845455 0.9996265846363528 0.02726974082357511 3.2695082683148526
+  position 0.0716912261247854 0.38612255078244034 -3.5463695514217455
 }
 TexturedBackground {
 }
@@ -12,7 +12,8 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 0.4 0
+  translation 2.7755575615628914e-17 0.19791389622596142 -2.7755575615628914e-17
+  rotation -0.46919240973559123 0.7273475409781179 0.5008233593589599 -1.8566008278391252e-16
   children [
     DEF GR_FRAME Group {
       children [
@@ -95,8 +96,70 @@ Solid {
           ]
         }
         Transform {
+          translation 0.15 0.15 0.3
+          rotation 0 0 1 1.5707996938995747
+          children [
+            USE Cylinder
+          ]
         }
         Transform {
+          translation 0.15 -0.15 0.3
+          rotation 0 0 1 1.5707996938995747
+          children [
+            USE Cylinder
+          ]
+        }
+        Transform {
+          translation 0.3 -0.15 0.15
+          rotation 1 0 0 1.5707996938995747
+          children [
+            USE Cylinder
+          ]
+        }
+        Transform {
+          translation 0.3 0.15 0.15
+          rotation 1 0 0 1.5707996938995747
+          children [
+            USE Cylinder
+          ]
+        }
+        Transform {
+          translation 0.3 0 0.3
+          rotation 1 0 0 0
+          children [
+            USE Cylinder
+          ]
+        }
+        Transform {
+          translation 0.3 0 0
+          rotation 1 0 0 0
+          children [
+            USE Cylinder
+          ]
+        }
+        Transform {
+          translation 0.3 -0.15000000000000002 0.3
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.30000000000000004 -0.15000000000000002 0
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.30000000000000004 0.15000000000000002 0
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.30000000000000004 0.15000000000000002 0.30000000000000004
+          children [
+            USE SH_SPHERE
+          ]
         }
       ]
     }
@@ -104,4 +167,6 @@ Solid {
   boundingObject USE GR_FRAME
   physics Physics {
   }
+  linearVelocity 3.511156654842013e-17 -1.085732145989784e-05 1.2707897646185605e-17
+  angularVelocity 9.175945226838702e-17 -1.1914262799325486e-17 -1.5293242074961617e-16
 }
