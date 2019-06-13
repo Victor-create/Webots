@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.0017471472963845455 0.9996265846363528 0.02726974082357511 3.2695082683148526
-  position 0.0716912261247854 0.38612255078244034 -3.5463695514217455
+  orientation -0.6719460471464588 -0.7397727264114599 -0.0349974710801227 0.14057817316173438
+  position -0.10350527644681956 0.33995422219118093 1.8472751453941458
 }
 TexturedBackground {
 }
@@ -19,13 +19,11 @@ Solid {
       children [
         DEF Cylinder Shape {
           appearance PBRAppearance {
-            baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
-            roughness 1
-            metalness 0
+            emissiveColor 1 1 1
           }
           geometry Cylinder {
             height 0.3
-            radius 0.01
+            radius 0.019999999999999997
           }
         }
         Transform {
@@ -34,8 +32,7 @@ Solid {
             DEF SH_SPHERE Shape {
               appearance PBRAppearance {
                 baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
-                roughness 1
-                metalness 0
+                emissiveColor 0.8 0 0
               }
               geometry Sphere {
                 radius 0.05
@@ -167,6 +164,4 @@ Solid {
   boundingObject USE GR_FRAME
   physics Physics {
   }
-  linearVelocity 3.511156654842013e-17 -1.085732145989784e-05 1.2707897646185605e-17
-  angularVelocity 9.175945226838702e-17 -1.1914262799325486e-17 -1.5293242074961617e-16
 }
